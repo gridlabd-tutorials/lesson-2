@@ -31,4 +31,14 @@ object overhead_line
     configuration lc309;
 }
 
+// Task 2.2 - Connect `load_116` directly to `load_115` .
+object load 
+{
+    parent load_115;
+    name load_116;
+    groupid nodevolts;
+    phases AN;
+    constant_power_A 20000.000000+10000.000000j;
+    nominal_voltage 2401.7771;
+}
 #output "IEEE-123-voltage-profile.png" -t profile -l 10
