@@ -18,7 +18,7 @@ object load
     name load_115;
     groupid nodevolts;
     phases AN;
-    constant_power_A 20000.000000+10000.000000j;
+    constant_power_A 20.0+10.0j kVA;
     nominal_voltage 2401.7771;
 }
 object overhead_line 
@@ -38,7 +38,7 @@ object load
     name load_116;
     groupid nodevolts;
     phases AN;
-    constant_power_A 20000.000000+10000.000000j;
+    constant_power_A 20.0+10.0j kVA;
     nominal_voltage 2401.7771;
 }
 #output "IEEE-123-voltage-profile.png" -t profile -l 10
