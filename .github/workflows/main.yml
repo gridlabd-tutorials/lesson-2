@@ -1,0 +1,36 @@
+name: Simulation
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: hipas/gridlabd:latest
+    
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Cache IEEE 123 model
+      id: ieee-123-model
+      uses: actions/cache@v3
+      with:
+        path: 123.glm
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('123.glm') }}
+        restore-keys: |
+          ${{ runner.os }}-build-${{ env.cache-name }}-
+          ${{ runner.os }}-build-
+          ${{ runner.os }}-
+
+    - name: Run simulation
+      run: gridlabd main.glm
+      
+    - name: Save results
+      uses: actions/upload-artifact@v3
+      with:
+        name: IEEE 123 voltage profile
+        path: IEEE-123-voltage-profile.png
+      
