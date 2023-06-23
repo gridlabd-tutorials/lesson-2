@@ -2,5 +2,14 @@
 #model get IEEE/123
 #endif
 #include "123.glm"
-modify load_1.constant_power_B 40000.000000+20000.000000j;
+
+// Task 1.1 - Change constant power load on phase A of `load_1`
+modify load_1.constant_power_A 48.0+24.0j kVA;
+
+// Task 1.2 - Add constant impedance load to phase B of `load_2`.
+modify load_2.constant_impedance_B 100+10j Ohm;
+
+// Task 1.3 - Remove constant power load on phase C of `load_4`.
+modify load_4.constant_power_C 0+0j kVA;
+
 #output "IEEE-123-voltage-profile.png" -t profile -l 10
