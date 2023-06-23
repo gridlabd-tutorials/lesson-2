@@ -1,0 +1,6 @@
+#ifmissing "123.glm"
+#model get IEEE/123
+#endif
+#include "123.glm"
+modify load_1.constant_power_B 40000.000000+20000.000000j;
+#output "IEEE-123-voltage-profile.png" -t profile -l 10
