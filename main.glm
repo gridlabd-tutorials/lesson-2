@@ -12,4 +12,23 @@ modify load_2.constant_impedance_B 100+10j Ohm;
 // Task 1.3 - Remove constant power load on phase C of `load_4`.
 modify load_4.constant_power_C 0+0j kVA;
 
+// Task 2.1 - Add `load_115` to `load_114` through `line_114to115`.
+object load 
+{
+    name load_115;
+    groupid nodevolts;
+    phases AN;
+    constant_power_A 20000.000000+10000.000000j;
+    nominal_voltage 2401.7771;
+}
+object overhead_line 
+{
+    name line114to115;
+    phases AN;
+    from load_114;
+    to load_115;
+    length 325.00;
+    configuration lc309;
+}
+
 #output "IEEE-123-voltage-profile.png" -t profile -l 10
