@@ -25,7 +25,7 @@ The following tasks are illustrated in [`main.glm`](main.glm):
 
 ## Exercises
 
-1. TODO
+1. Change the constant power load on `load_116` to an equivalent constant current load. (Hint: the `constant_current = constant_power / nominal_voltage`.)
 
 # Next Lesson
 
