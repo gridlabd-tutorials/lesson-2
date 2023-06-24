@@ -18,7 +18,7 @@ object load
     name load_115;
     groupid nodevolts;
     phases AN;
-    constant_power_A 20.0+10.0j kVA;
+    constant_power_A @load_114; // copy from load_114
     nominal_voltage 2401.7771;
 }
 object overhead_line 
@@ -38,7 +38,8 @@ object load
     name load_116;
     groupid nodevolts;
     phases AN;
-    constant_power_A 20.0+10.0j kVA;
+    constant_power_A_real (load_114.constant_power_A_real*2); // double load_114
+    constant_power_A_reac (load_114.constant_power_A_reac*2); // double load_114
     nominal_voltage 2401.7771;
 }
 
