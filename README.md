@@ -1,3 +1,5 @@
+[![Simulation](../../actions/workflows/main.yml/badge.svg)](../../actions/workflows/main.yml)
+
 # Lesson 2 - Static Loads
 
 The goal this lesson is to familiarize you with the various ways of modeling loads in GridLAB-D. The specific learning objectives are the following
