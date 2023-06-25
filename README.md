@@ -2,7 +2,7 @@
 
 # Lesson 2 - Static Loads
 
-The goal this lesson is to familiarize you with the various ways of modeling loads in GridLAB-D. The specific learning objectives are the following
+The goal of this lesson is to familiarize you with the various ways of modeling loads in GridLAB-D. The specific learning objectives are the following
 
 1. How to modify an existing static load.
 2. How to add static loads of different types.
