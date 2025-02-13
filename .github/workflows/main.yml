@@ -29,7 +29,7 @@ jobs:
       run: gridlabd main.glm
       
     - name: Save results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: IEEE 123 voltage profile
         path: IEEE-123-voltage-profile.png
